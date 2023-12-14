@@ -9,16 +9,40 @@
 <script src="js/bgstretcher.js"></script>
 <script>
 $(document).ready(function () {
-    $('body').bgStretcher({
-        images: ['images/flower-hands.jpg', 'images/nails.jpg', 'images/colors.jpg'],
-        imageWidth: 1600,
-        imageHeight: 964,
-        resizeProportionally: true,
-        slideDirection: 'N',
-        slideShowSpeed: 1000,
-        transitionEffect: 'fade',
-        sequenceMode: 'normal',
-        pagination: '#nav'
+    function adjustBgStretcher() {
+        var screenWidth = $(window).width();
+        if (screenWidth < 768) { // For smaller screens
+            $('body').bgStretcher({
+                images: ['images/flower-hands-mobile.jpg', 'images/nails-mobile.jpg', 'images/colors-mobile.jpg'], // Mobile-sized images
+                imageWidth: 768,
+                imageHeight: 1024,
+                resizeProportionally: true,
+                slideDirection: 'N',
+                slideShowSpeed: 1000,
+                transitionEffect: 'fade',
+                sequenceMode: 'normal',
+                pagination: '#nav'
+            });
+        } else { // For larger screens
+            $('body').bgStretcher({
+                images: ['images/flower-hands.jpg', 'images/nails.jpg', 'images/colors.jpg'],
+                imageWidth: 1600,
+                imageHeight: 964,
+                resizeProportionally: true,
+                slideDirection: 'N',
+                slideShowSpeed: 1000,
+                transitionEffect: 'fade',
+                sequenceMode: 'normal',
+                pagination: '#nav'
+            });
+        }
+    }
+
+    adjustBgStretcher(); // Call initially
+
+    // Call adjustBgStretcher() when window resizes
+    $(window).resize(function() {
+        adjustBgStretcher();
     });
 });
 </script>
@@ -52,6 +76,7 @@ $(document).ready(function () {
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="policy.html">Policy</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
