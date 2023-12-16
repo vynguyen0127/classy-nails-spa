@@ -17,6 +17,20 @@ $(document).ready(function () {
     });
 });
 </script>
+<style>
+  /* General styles... (previous CSS remains unchanged) */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 20px;
+  }
+  .photo-grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
 <!--[if lt IE 9]>   
 <script src="js/html5shiv.js"></script>
 <link href="css/ie.css" rel="stylesheet" type="text/css" media="screen">
@@ -48,7 +62,7 @@ $(document).ready(function () {
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contacts.html">Contacts</a></li>
             <li><a href="policy.html">Policy</a></li>
-            <li><a href="party.html">Parties</a></li>
+            <li class="current"><a href="party.html">Parties</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
@@ -57,7 +71,28 @@ $(document).ready(function () {
   </header>
   <section id="content">
     <div class="main-block policy">
-      <img src="images/menu/special-extra-services.jpg">
+      <div class="main">
+        <h3>Parties</h3>
+        <h4>Reserve Our Private 6-Person Room for Your Special Occasion!</h4>
+        <p>Experience exclusive luxury and celebrate in style with our private 6-person room, a haven designed for intimate gatherings and special occasions at Classy Nails and Spa. Featuring personalized service, a chic ambiance, and dedicated amenities, this secluded space provides the perfect setting for creating unforgettable memories with your closest friends or family. </p>
+        <div class="photo-grid">
+          <div class="photo-grid-item">
+            <img src="images/classynailspedicureroomprivateparty/DSC_0610.JPG" alt="Photo 1">
+          </div>
+          <div class="photo-grid-item">
+            <img src="images/classynailspedicureroomprivateparty/DSC_0611.JPG" alt="Photo 2">
+          </div>
+          <div class="photo-grid-item">
+            <img src="images/classynailspedicureroomprivateparty/DSC_0615.JPG"alt="Photo 3">
+          </div>
+          <div class="photo-grid-item">
+            <img src="images/classynailspedicureroomprivateparty/DSC_0613.JPG" alt="Photo 4">
+          </div>
+          <div class="photo-grid-item">
+            <img src="images/classynailspedicureroomprivateparty/DSC_0612.JPG" alt="Photo 5">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

@@ -652,3 +652,27 @@ footer {
 	color:#fcf9f9;	
 	display:inline-block;
 }
+
+@media screen and (max-width: 768px) {
+	bg-stretcher {
+		width: max-content;
+	}
+  }
+  @media screen and (max-width: 480px) {
+	header {
+	  padding: 10px;
+	}
+	nav ul li {
+	  display: block;
+	  margin: 10px 0;
+	}
+	.hero-section {
+	  padding: 60px 0;
+	}
+	.hero-section h2 {
+	  font-size: 28px;
+	}
+	.hero-section p {
+	  font-size: 16px;
+	}
+  }
