@@ -7,45 +7,16 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery-migrate-1.1.1.js"></script>
 <script src="js/bgstretcher.js"></script>
-<script>
-$(document).ready(function () {
-    function adjustBgStretcher() {
-        var screenWidth = $(window).width();
-        if (screenWidth < 768) { // For smaller screens
-            $('body').bgStretcher({
-                images: ['images/flower-hands-mobile.jpg', 'images/nails-mobile.jpg', 'images/colors-mobile.jpg'], // Mobile-sized images
-                imageWidth: 768,
-                imageHeight: 1024,
-                resizeProportionally: true,
-                slideDirection: 'N',
-                slideShowSpeed: 1000,
-                transitionEffect: 'fade',
-                sequenceMode: 'normal',
-                pagination: '#nav'
-            });
-        } else { // For larger screens
-            $('body').bgStretcher({
-                images: ['images/flower-hands.jpg', 'images/nails.jpg', 'images/colors.jpg'],
-                imageWidth: 1600,
-                imageHeight: 964,
-                resizeProportionally: true,
-                slideDirection: 'N',
-                slideShowSpeed: 1000,
-                transitionEffect: 'fade',
-                sequenceMode: 'normal',
-                pagination: '#nav'
-            });
-        }
-    }
-
-    adjustBgStretcher(); // Call initially
-
-    // Call adjustBgStretcher() when window resizes
-    $(window).resize(function() {
-        adjustBgStretcher();
-    });
-});
-</script>
+<!-- <script>
+  $(document).ready(function () {
+      $('body').bgStretcher({
+          images: ['images/flower-hands.jpg'],
+          imageWidth: 1600,
+          imageHeight: 964,
+          resizeProportionally: true
+      });
+  });
+  </script> -->
 <!--[if lt IE 9]>   
 <script src="js/html5shiv.js"></script>
 <link href="css/ie.css" rel="stylesheet" type="text/css" media="screen">

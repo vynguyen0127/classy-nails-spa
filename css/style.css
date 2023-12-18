@@ -7,7 +7,10 @@ body {
 	color:#faf9f5;
 	position:relative;
 	min-width:1036px;
-	background:#000
+	background:#000;
+	background-image: url("../images/flower-hands.jpg");
+	background-size:cover;
+	background-position: center;
 }
 html, body {
 	height:100%;
